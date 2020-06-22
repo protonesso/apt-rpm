@@ -3,7 +3,7 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.59)
 AC_INIT([apt],[0.5.15lorg3.95],[apt-rpm@lists.laiskiainen.org])
 dnl Check the archs, we want the target type.
-AC_CONFIG_AUX_DIR([buildlib])
+AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CANONICAL_HOST
 AC_CONFIG_SRCDIR([AUTHORS.RPM])

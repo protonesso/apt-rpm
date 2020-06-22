@@ -9,6 +9,7 @@
 #include <rpm/rpmlib.h>
 #include <stdlib.h>
 #include <string.h>
+#include <libgen.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -82,7 +83,7 @@ int usefulFile(const char *fn)
       return 1;
 
    // shared libraries
-   const char *bn = basename(fn);
+   const char *bn = basename((char*)fn);
    if (bn && strncmp(bn, "lib", 3) == 0 && strstr(bn + 3, ".so"))
       return 1;
 
